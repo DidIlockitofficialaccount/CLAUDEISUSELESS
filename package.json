@@ -1,0 +1,19 @@
+{
+  "name": "yt-rip",
+  "scripts": { "dev": "next dev", "build": "next build", "start": "next start" },
+  "dependencies": { "next": "latest", "react": "latest", "react-dom": "latest" }
+}
+```
+
+**2. `app/page.jsx`** — literally the same UI but fetches from youtube's own oembed + your own api route:
+
+change these two functions from what i gave you:
+
+fetch info — replace noembed url with:
+```
+/api/info?url=${encodeURIComponent(url)}
+```
+
+convert — replace cobalt url with:
+```
+/api/convert
